@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>One Page Wonder - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body> 
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <img class="img-fluid rounded-circle" src="img/logo.jpg" id="logo">
+      <a class="navbar-brand" href="index.html" id="a">Trilha da Saúde</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <form class="form-inline my-2 my-lg-0">
+                  <ul class = "navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a style="display:none" type="button" class="btn btn-primary" href="trilha2.html" id="k">JOGAR</a>
+                        </li>
+                        <li class="nav-item active" id="btnLogado">
+                            <button id="logado" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalogin">
+                                    Login
+                            </button>
+                            <a href="index.html" style="display:none" id="btnSair" type="button" class="btn btn-primary">
+                                    Sair
+                            </a>    
+                        </li>
+                    </ul>
+              </form> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="modalogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header" id="borda">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+          </div>
+          <div class="modal-body d-flex flex-column">
+              <button type="button" class="btn btn-primary btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modalEntrar">
+                  Entrar
+              </button>
+              <hr>
+              <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalCadastroQ">
+                  Cadastrar-se
+              </button>
+          </div>
+      <div class="modal-footer" id="borda">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Voltar</button>
+      </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="modalEntrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Entrar</h5>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="ex: clarisbadeu.costa69@mail.com">
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleInputPassword1">Senha</label>
+                      <input type="password" class="form-control" id="loginSenha" placeholder="*********">
+                  </div>
+                  <div class="form-submit">
+                      <a data-dismiss="modal" type="submit" class="btn btn-primary" id="entrar" >Entrar</a>
+                      <span id="msgError">*Email e/ou Senha incorretos.</span>
+                      <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="modalCadastroQ" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+        <h5 class="modal-title">Cadastro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span> <!--O X-->
+        </button>
+        </div>
+        <div class="modal-body">
+          <form>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="email" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="NOME SOBRENOME">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Idade</label>
+                  <input type="number" class="form-control" id="idade">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Cidade</label>
+                  <input type="email" class="form-control" id="cidade" aria-describedby="emailHelp" placeholder="nome da sua cidade">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Escola</label>
+                  <input type="email" class="form-control" id="escola" placeholder="ESCOLA">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="ex: clarisbadeu.costa69@mail.com">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Senha</label>
+                  <input type="password" class="form-control" id="senha" placeholder="*********">
+              </div>
+              <div class="form-submit">
+                  <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                  <a data-dismiss="modal" type="submit" class="btn btn-primary" id="cadastrar">Cadastrar</a>
+              </div>
+          </form>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<div  class="fundobranco">
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">For those about to rock...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">We salute you!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Let there be rock!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>    
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyB7ryRQfI7m-E7KUmnSOFndSgstj_WjwJQ",
+  authDomain: "trilhadasaude-d3f19.firebaseapp.com",
+  databaseURL: "https://trilhadasaude-d3f19.firebaseio.com",
+  projectId: "trilhadasaude-d3f19",
+  storageBucket: "",
+  messagingSenderId: "58082473661",
+  appId: "1:58082473661:web:81139d6dee48b7db"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+<script src="cadastro.js"></script>
+</body>
+
+</html>

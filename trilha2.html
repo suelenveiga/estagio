@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>One Page Wonder - Start Bootstrap Template</title>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <img class="img-fluid rounded-circle" src="img/logo.jpg" id="logo">
+      <a class="navbar-brand" href="index.html" id="a">Trilha da Saúde</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a style="display:none" type="button" class="btn btn-primary" id="nav2" href="trilha2.html">BISS</a>
+              </li>
+            <li class="nav-item">
+              <form class="form-inline my-2 my-lg-0">
+                  <ul class = "navbar-nav mr-auto">
+                        <li class="nav-item active" id="btnLogado">
+                            <a type="button" class="btn btn-primary" href="index.html">SAIR</a>    
+                        </li>
+                        <li class="nav-item active" id="btnLogado">
+                            <a type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#personalizar" >PERSONALIZAR AVATAR</a>    
+                        </li>
+                    </ul>
+              </form> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="personalizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+        <h5 class="modal-title">PERSONIFICAÇÕES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span> <!--O X-->
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="avatares">
+                  <a data-toggle="modal" data-target="#modalBoca">
+                      <img class="img-fluid rounded-circle" src="img/avatar/boca.png" id="avatar">
+                  </a>
+                  <a data-toggle="modal" data-target="#modalCabelo">
+                      <img class="img-fluid rounded-circle" src="img/avatar/cabelo.png" id="avatar2">
+                    </a>
+                  <a data-toggle="modal" data-target="#modalAcesso">
+                      <img class="img-fluid rounded-circle" src="img/avatar/acessorio.png" id="avatar3">
+                    </a>
+              </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBoca" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+      <h5 class="modal-title">PERSONIFICAÇÕES BOCAS</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span> <!--O X-->
+      </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="avatares">
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/boca1.png" id="avatar">
+                </a>
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/boca2.png" id="avatar2">
+                  </a>
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/boca3.png" id="avatar3">
+                  </a>
+            </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCabelo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+      <h5 class="modal-title">PERSONIFICAÇÕES CABELO</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span> <!--O X-->
+      </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="avatares">
+                <a data-toggle="modal" data-target="#modalCabelo1" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo1.png" id="avatar">
+                </a>
+                <a data-toggle="modal" data-target="#modalCabelo2" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo2.png" id="avatar2">
+                  </a>
+                <a data-toggle="modal" data-target="#modalCabelo3" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo3.png" id="avatar3">
+                  </a>
+            </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalAcesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+        <h5 class="modal-title">PERSONIFICAÇÕES ACESSORIOS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span> <!--O X-->
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="avatares">
+                  <a data-toggle="modal" data-dismiss="modal">
+                      <img class="img-fluid rounded-circle" src="img/avatar/cabelo1.png" id="avatar">
+                  </a>
+                  <a data-toggle="modal" data-dismiss="modal">
+                      <img class="img-fluid rounded-circle" src="img/avatar/cabelo2.png" id="avatar2">
+                    </a>
+                  <a data-toggle="modal" data-dismiss="modal">
+                      <img class="img-fluid rounded-circle" src="img/avatar/cabelo3.png" id="avatar3">
+                    </a>
+              </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="modalCabelo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+      <h5 class="modal-title">PERSONIFICAÇÕES COR CABELO</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span> <!--O X-->
+      </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="avatares">
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo1p.png" id="avatar">
+                </a>
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo1l.png" id="avatar2">
+                  </a>
+            </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCabelo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+      <h5 class="modal-title">PERSONIFICAÇÕES COR CABELO</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span> <!--O X-->
+      </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="avatares">
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo2p.png" id="avatar">
+                </a>
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo2l.png" id="avatar2">
+                  </a>
+            </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCabelo3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+      <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+      <h5 class="modal-title">PERSONIFICAÇÕES COR CABELO</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span> <!--O X-->
+      </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="avatares">
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo3p.png" id="avatar">
+                </a>
+                <a data-toggle="modal" data-dismiss="modal">
+                    <img class="img-fluid rounded-circle" src="img/avatar/cabelo3l.png" id="avatar2">
+                  </a>
+            </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="modalAvatares" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+        <h5 class="modal-title">ESCOLHA SEU AVATAR</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span> <!--O X-->
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="avatares">
+                  <a data-toggle="modal"  data-dismiss="modal" id="mavatar1">
+                      <img class="img-fluid rounded-circle" src="img/avatar1/avatar1.png" id="avatar">
+                  </a>
+                  <a data-toggle="modal" data-dismiss="modal" id="mavatar2">
+                      <img class="img-fluid rounded-circle" src="img/avatar2/avatar2.png" id="avatar2">
+                    </a>
+                  <a data-toggle="modal" data-dismiss="modal" id="mavatar3">
+                      <img class="img-fluid rounded-circle" src="img/avatar3/avatar3.png" id="avatar3">
+                    </a>
+              </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+  
+  <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+          <h5 class="modal-title">ESCOLHA SEU INSTRUTOR</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span> <!--O X-->
+          </button>
+          </div>
+          <div class="modal-body">
+              <form>
+                <div class="avatares">
+                    <a data-toggle="modal" data-target="#modalInstrutor1" data-dismiss="modal">
+                        <img class="img-fluid rounded-circle" src="img/avatar4.jpg" id="avatar">
+                    </a>
+                    <a data-toggle="modal" data-target="#modalInstrutor2" data-dismiss="modal">
+                        <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="avatar2">
+                      </a>
+                    <a data-toggle="modal" data-target="#modalInstrutor3" data-dismiss="modal">
+                        <img class="img-fluid rounded-circle" src="img/avatar6.jpg" id="avatar3">
+                      </a>
+                </div>
+              </form>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalInstrutor1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="borda">
+        <div class="modal-body">
+            <form>
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">INSTRUTOR 1</h5>
+                  </div>
+                    <div class="modal-centered" id="centro">
+                      <br>
+                        <img class="img-fluid rounded-circle" src="img/avatar4.jpg" id="avatar">
+                        <br>
+                    </div>
+                    <div class="modal-body d-flex flex-column">
+                        <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                          lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </P>
+                    </div>
+
+                    </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+            <button type="submit" class="btn btn-primary" id="selecionar1" data-dismiss="modal" data-toggle="modal" data-target="#modalAvatares" >SELECIONAR</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalInstrutor2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="borda">
+        <div class="modal-body">
+            <form>
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">INSTRUTOR 2</h5>
+                  </div>
+                    <div class="modal-centered" id="centro">
+                      <br>
+                        <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="avatar">
+                        <br>
+                    </div>
+                    <div class="modal-body d-flex flex-column">
+                        <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                          lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </P>
+                    </div>
+
+                    </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+            <a type="submit" class="btn btn-primary" id="selecionar2" data-dismiss="modal" data-toggle="modal" data-target="#modalAvatares">SELECIONAR</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalInstrutor3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="borda">
+        <div class="modal-body">
+            <form>
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">INSTRUTOR 3</h5>
+                  </div>
+                    <div class="modal-centered" id="centro">
+                      <br>
+                        <img class="img-fluid rounded-circle" src="img/avatar6.jpg" id="avatar">
+                        <br>
+                    </div>
+                    <div class="modal-body d-flex flex-column">
+                        <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                          lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </P>
+                    </div>
+
+                    </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+            <a type="submit" class="btn btn-primary" id="selecionar3" data-dismiss="modal" data-toggle="modal" data-target="#modalAvatares">SELECIONAR</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="alert alert-success" id="modalogin1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header" id="borda">
+            <h5 class="modal-title" id="exampleModalCenterTitle">OBJETIVO DO JOGO</h5>
+        </div>
+        <div class="modal-body d-flex flex-column">
+            <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit explicabo maiores aperiam omnis reprehenderit cum nesciunt atque nam et. Magni obcaecati eligendi, in praesentium repudiandae vitae. Exercitationem quas dolorem nemo!LoremLOREM
+            </P>
+        </div>
+  
+        <div class="modal-footer" id="borda">
+            <button id="erro" type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalCadastro">
+                JOGAR
+            </button>
+            </div>
+   
+        </div>
+    </div>
+  </div>
+  
+<div id="trilha">
+<br><br><br>
+<div id="chat">
+    <li href="#" class="list-group-item active">
+        CHAT ONLINE
+      </li> 
+</div>
+
+  <div id="chat2">
+    <textarea name="" id="texto" cols="33" rows="3"></textarea>
+    <div class="modal-footer" >
+    <button id="enviar" type="submit" class="btn btn-primary">
+      ENVIAR
+</button>
+</div>
+  </div>
+
+<div id="tabuleiro">
+  <div id="ranking" style="display:none" >
+    <h5>RANKING</h5>
+    <!-- On rows -->
+    <table class="table table-sm table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ESCOLA</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+      <br>
+      <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="avatar22">
+          <img src="img/balao.png" id="balao">
+          <h8 id="h">Obrigada por participar !!</h8>
+  </div>
+
+  <div id='some'>
+      <div id="pontos"></div>
+        <a type="button" id="dado" style='display:none'>
+            <img src="img/dados.png" alt="" id="dado1">
+        </a>
+        <div class="partida"></div>
+        <a class="circulo">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+      </a>
+        <a class="circulo2">
+          <img class="img-fluid rounded-circle" src="img/int2.png" id="desafio">
+        </a>
+        <a class="circulo3">
+          <img class="img-fluid rounded-circle" src="img/int3.png" id="desafio">
+        </a>
+        <a class="circulo4">
+          <img class="img-fluid rounded-circle" src="img/int4.png" id="desafio">
+        </a>
+        <a class="circulo5">
+          <img class="img-fluid rounded-circle" src="img/bloq5.png" id="desafio">
+        </a>
+        <a class="circulo6">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+        </a>
+        <a class="circulo7">
+          <img class="img-fluid rounded-circle" src="img/int2.png" id="desafio">
+        </a>
+        <a class="circulo8">
+          <img class="img-fluid rounded-circle" src="img/int3.png" id="desafio">
+        </a>
+        <a class="circulo9">
+          <img class="img-fluid rounded-circle" src="img/int4.png" id="desafio">
+        </a>
+        <a class="circulo10">
+          <img class="img-fluid rounded-circle" src="img/bloq2.png" id="desafio">
+        </a>
+        <a class="circulo11">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+        </a>
+        <a class="circulo12">
+          <img class="img-fluid rounded-circle" src="img/int2.png" id="desafio">
+        </a>
+        <a class="circulo13">
+          <img class="img-fluid rounded-circle" src="img/int3.png" id="desafio">
+        </a>
+        <a class="circulo14">
+          <img class="img-fluid rounded-circle" src="img/int4.png" id="desafio">
+        </a>
+        <a class="circulo15">
+          <img class="img-fluid rounded-circle" src="img/bloq3.png" id="desafio">
+        </a>
+        <a class="circulo16">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+        </a>
+        <a class="circulo17">
+          <img class="img-fluid rounded-circle" src="img/int2.png" id="desafio">
+        </a>
+        <a class="circulo18">
+          <img class="img-fluid rounded-circle" src="img/int3.png" id="desafio">
+        </a>
+        <a class="circulo19">
+          <img class="img-fluid rounded-circle" src="img/int4.png" id="desafio">
+        </a>
+        <a class="circulo20">
+          <img class="img-fluid rounded-circle" src="img/bloq4.png" id="desafio">
+        </a>
+        <a class="circulo21">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+        </a>
+        <a class="circulo22">
+          <img class="img-fluid rounded-circle" src="img/int.png" id="desafio">
+        </a>
+        <a class="circulo23">
+          <img class="img-fluid rounded-circle" src="img/bloq5.png" id="desafio">
+        </a>
+        <div class="chegada">
+          <img src="img/escola.png" id="desafio1">
+        </div>
+
+        <img class="img-fluid rounded-circle" src="img/avatar1/avatar1.png" id="avatarteste1" style="display:none">
+        <img class="img-fluid rounded-circle" src="img/avatar2/avatar2.png" id="avatarteste2" style="display:none">
+        <img class="img-fluid rounded-circle" src="img/avatar3/avatar3.png" id="avatarteste3" style="display:none">
+        
+        <div class="alert alert-success" id="perguntinha" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display:none">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header" id="borda">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PERGUNTINHA</h5>
+                    <button data-toggle="modal" data-target="#fiscal" type="button" class="btn btn-secondary btn-sm" id="fiscal2" >
+                        Consultar Fiscal
+                      </button>
+                    <button data-toggle="modal" data-target="#manual2" type="button" class="btn btn-secondary btn-sm" id="manual" >
+                      Consultar Manual
+                    </button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <P type="button" class="btn btn-primary btn-block" id="perg">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit explicabo maiores aperiam omnis reprehenderit cum nesciunt atque nam et. Magni obcaecati eligendi, in praesentium repudiandae vitae. Exercitationem quas dolorem nemo!LoremLOREM
+                    </P>
+                </div>
+          
+                <div class="modal-header" id="borda">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" id="erro2" >a</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" id="erro3" >
+                            alternativa B
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" id="erro4" >
+                            alternativa C
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" id="erro5" >
+                            alternativa D
+                    </button>
+                    </div>
+
+<div class="modal fade" id="manual2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header" id="borda">
+            <h5 class="modal-title" id="exampleModalCenterTitle">MANUAL DE VIGILANCIA SANITARIA</h5>
+        </div>
+        <div class="modal-body d-flex flex-column">
+          <div id="manu">
+          <div  class="btn btn-primary btn-block">
+              <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?L
+              </li>
+          </div>
+          <div  class="btn btn-primary btn-block">
+                <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?L
+                </li>
+          </div>
+          <div  class="btn btn-primary btn-block">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?L
+                </li>
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer" id="borda"></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="fiscal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="borda">
+        <div class="modal-body">
+            <form>
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 5</h5>
+                  </div>
+                      <br>
+                      <div>
+                          <img class="img-fluid rounded-circle" src="img/avatar4.jpg" id="fisc" style="display:none">
+                          <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="fisc2" style="display:none">
+                          <img class="img-fluid rounded-circle" src="img/avatar6.jpg" id="fisc3" style="display:none">
+                      </div>
+                    <div class="modal-body d-flex flex-column" id="dica">
+                        <P type="button" class="btn btn-primary btn-block" id="dicaa"></P>
+                    </div>
+
+                    </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#manual2" data-dismiss="modal" >Consultar Manual</button>
+        </div>
+    </div>
+    </div>
+</div>
+           
+                </div>
+            </div>
+          </div>
+            </div>
+          </div>
+      
+</div>
+
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7ryRQfI7m-E7KUmnSOFndSgstj_WjwJQ",
+    authDomain: "trilhadasaude-d3f19.firebaseapp.com",
+    databaseURL: "https://trilhadasaude-d3f19.firebaseio.com",
+    projectId: "trilhadasaude-d3f19",
+    storageBucket: "",
+    messagingSenderId: "58082473661",
+    appId: "1:58082473661:web:81139d6dee48b7db"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="avatar.js"></script>
+
+</body>
+
+</html>

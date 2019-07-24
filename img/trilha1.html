@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-toggle="modal" data-target="#modalogin">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>One Page Wonder - Start Bootstrap Template</title>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <img class="img-fluid rounded-circle" src="img/logo.jpg" id="logo">
+      <a class="navbar-brand" href="index.html" id="a">Trilha da Saúde</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a type="button" class="btn btn-primary" href="trilha1.html">JOGAR</a>
+            </li>
+            <li class="nav-item">
+              <form class="form-inline my-2 my-lg-0">
+                  <ul class = "navbar-nav mr-auto">
+                        <li class="nav-item active" id="btnLogado">
+                            <button style="display:none" id="logado" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalogin">
+                                    Login
+                            </button>
+                            <a type="button" class="btn btn-primary" href="index.html">SAIR</a>    
+                        </li>
+                    </ul>
+              </form> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="trilha">
+
+    <div id="dado">
+
+    </div>
+  <br><br><br>
+
+  <div id="chat"></div>
+  <div id="chat2">
+    <textarea name="" id="texto" cols="33" rows="3"></textarea>
+    <div class="modal-footer" >
+    <button id="enviar" type="submit" class="btn btn-primary">
+      ENVIAR
+</button>
+</div>
+  </div>
+
+
+  <div id='tabuleiro'>
+        <div class="partida"></div>
+        <div class="circulo"></div>
+        <div class="circulo2"></div>
+        <div class="circulo3"></div>
+        <div class="circulo4"></div>
+        <div class="circulo5"></div>
+        <div class="circulo6"></div>
+        <div class="circulo7"></div>
+        <div class="circulo8"></div>
+        <div class="circulo9"></div>
+        <div class="circulo10"></div>
+        <div class="circulo11"></div>
+        <div class="circulo12"></div>
+        <div class="circulo13"></div>
+        <div class="circulo14"></div>
+        <div class="circulo15"></div>
+        <div class="circulo16"></div>
+        <div class="circulo17"></div>
+        <div class="circulo18"></div>
+        <div class="circulo19"></div>
+        <div class="circulo20"></div>
+        <div class="circulo21"></div>
+        <div class="circulo22"></div>
+        <div class="circulo23"></div>
+        <div class="chegada"></div>
+            </div>
+</div>
+
+
+<div class="modal fade" id="modalogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header" id="borda">
+            <h5 class="modal-title" id="exampleModalCenterTitle">OBJETIVO DO JOGO</h5>
+        </div>
+        <div class="modal-body d-flex flex-column">
+            <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit explicabo maiores aperiam omnis reprehenderit cum nesciunt atque nam et. Magni obcaecati eligendi, in praesentium repudiandae vitae. Exercitationem quas dolorem nemo!LoremLOREM
+            </P>
+        </div>
+  
+        <div class="modal-footer" id="borda">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Voltar</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modalCadastro">
+                seguir
+            </button>
+            </div>
+   
+        </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header" style="background-color:rgb(243, 14, 174)">
+          <h5 class="modal-title">ESCOLHA SEU AVATAR</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span> <!--O X-->
+          </button>
+          </div>
+          <div class="modal-body">
+              <form>
+                <div class="avatares">
+                    <a data-toggle="modal" data-target="#modalAvatar1">
+                        <img class="img-fluid rounded-circle" src="img/avatar1.jpg" id="avatar1">
+                    </a>
+                    <a data-toggle="modal" data-target="#modalAvatar2">
+                        <img class="img-fluid rounded-circle" src="img/avatar2.jpg" id="avatar2">
+                      </a>
+                    <a data-toggle="modal" data-target="#modalAvatar3">
+                        <img class="img-fluid rounded-circle" src="img/avatar3.jpg" id="avatar3">
+                      </a>
+                      <br><br><br>
+                    <a data-toggle="modal" data-target="#modalAvatar4">
+                        <img class="img-fluid rounded-circle" src="img/avatar4.jpg" id="avatar4">
+                    </a>
+                    <a data-toggle="modal" data-target="#modalAvatar5">
+                        <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="avatar5">
+                    </a>
+                    <a data-toggle="modal" data-target="#modalAvatar6">
+                        <img class="img-fluid rounded-circle" src="img/avatar6.jpg" id="avatar6">
+                    </a>
+                </div>
+              </form>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 1</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar1.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 2</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar2.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 3</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar3.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 4</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar4.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 5</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar5.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="modalAvatar6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" id="borda">
+          <div class="modal-body">
+              <form>
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">AVATAR 6</h5>
+                    </div>
+                      <div class="modal-centered" id="centro">
+                        <br>
+                          <img class="img-fluid rounded-circle" src="img/avatar6.jpg" id="avatar">
+                          <br>
+                      </div>
+                      <div class="modal-body d-flex flex-column">
+                          <P type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalEntrar">
+                            lorranaLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa ipsam sequi! Rerum fuga distinctio nobis repudiandae rem adipisci aliquid, ullam officiis in magni eveniet ratione sit. Harum, magni nulla?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          </P>
+                      </div>
+
+                      </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+              <a href="trilha2.html" type="submit" class="btn btn-primary" id="selecionar">SELECIONAR</a>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7ryRQfI7m-E7KUmnSOFndSgstj_WjwJQ",
+    authDomain: "trilhadasaude-d3f19.firebaseapp.com",
+    databaseURL: "https://trilhadasaude-d3f19.firebaseio.com",
+    projectId: "trilhadasaude-d3f19",
+    storageBucket: "",
+    messagingSenderId: "58082473661",
+    appId: "1:58082473661:web:81139d6dee48b7db"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</body>
+
+</html>
